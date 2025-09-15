@@ -1,0 +1,180 @@
+/* ===========================
+   RESET & BASE STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f0ede6;
+    color: #4a453e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+/* ===========================
+   MAIN CONTAINER
+   =========================== */
+.container {
+    background-color: #e8e3da;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    width: 100%;
+    border: 1px solid #d9d2c5;
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #6b635a;
+}
+
+label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: #6b635a;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   INPUT STYLING
+   =========================== */
+#city-input {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    border: 2px solid #c4b59a;
+    border-radius: 4px;
+    color: #3a352f;
+    margin: 0 auto 1rem;
+    display: block;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+#city-input::placeholder {
+    color: #9a927c;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #a69885;
+}
+
+/* ===========================
+   BUTTON STYLING
+   =========================== */
+#get-weather-btn {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background-color: #8b7d65;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+    display: block;
+    margin: 0 auto;
+}
+
+#get-weather-btn:hover {
+    background-color: #756952;
+}
+
+#get-weather-btn:active {
+    background-color: #83775f;
+}
+
+/* ===========================
+   LOADING MESSAGE
+   =========================== */
+#loading-message {
+    display: none;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #a69885;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   WEATHER DISPLAY
+   =========================== */
+#weather-display {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #ddd6c9;
+    border-radius: 6px;
+    border: 2px solid #c4b59a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#weather-display:empty {
+    display: none;
+}
+
+#weather-display h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #3a352f;
+}
+
+#weather-display p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #4a453e;
+}
+
+#weather-display img {
+    width: 64px;
+    height: 64px;
+    margin-top: 0.5rem;
+}
+
+/* Error states */
+#weather-display p[style*="color: red"] {
+    background-color: #f7e6e6;
+    border: 1px solid #e8b4b4;
+    border-radius: 4px;
+    padding: 0.75rem;
+    color: #a94442 !important;
+    margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 2rem 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+}
